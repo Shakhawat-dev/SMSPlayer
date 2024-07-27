@@ -14,6 +14,10 @@
 		115106392C5532B400D91D04 /* SMSPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106382C5532B400D91D04 /* SMSPlayerTests.swift */; };
 		115106432C5532B400D91D04 /* SMSPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106422C5532B400D91D04 /* SMSPlayerUITests.swift */; };
 		115106452C5532B400D91D04 /* SMSPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106442C5532B400D91D04 /* SMSPlayerUITestsLaunchTests.swift */; };
+		115106522C5532E800D91D04 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106512C5532E800D91D04 /* VideoPlayerView.swift */; };
+		115106542C55339400D91D04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106532C55339400D91D04 /* HomeView.swift */; };
+		115106572C55352D00D91D04 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 115106562C55352D00D91D04 /* video.mov */; };
+		115106592C55383700D91D04 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115106582C55383700D91D04 /* VideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		1151063E2C5532B400D91D04 /* SMSPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMSPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115106422C5532B400D91D04 /* SMSPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSPlayerUITests.swift; sourceTree = "<group>"; };
 		115106442C5532B400D91D04 /* SMSPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		115106512C5532E800D91D04 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		115106532C55339400D91D04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		115106562C55352D00D91D04 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		115106582C55383700D91D04 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 		115106252C5532B300D91D04 /* SMSPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				115106552C55351700D91D04 /* Video */,
 				115106262C5532B300D91D04 /* SMSPlayerApp.swift */,
 				115106282C5532B300D91D04 /* ContentView.swift */,
+				115106532C55339400D91D04 /* HomeView.swift */,
+				115106512C5532E800D91D04 /* VideoPlayerView.swift */,
+				115106582C55383700D91D04 /* VideoPlayer.swift */,
 				1151062A2C5532B400D91D04 /* Assets.xcassets */,
 				1151062C2C5532B400D91D04 /* SMSPlayer.entitlements */,
 				1151062D2C5532B400D91D04 /* Preview Content */,
@@ -127,6 +139,14 @@
 				115106442C5532B400D91D04 /* SMSPlayerUITestsLaunchTests.swift */,
 			);
 			path = SMSPlayerUITests;
+			sourceTree = "<group>";
+		};
+		115106552C55351700D91D04 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				115106562C55352D00D91D04 /* video.mov */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115106572C55352D00D91D04 /* video.mov in Resources */,
 				1151062F2C5532B400D91D04 /* Preview Assets.xcassets in Resources */,
 				1151062B2C5532B400D91D04 /* Assets.xcassets in Resources */,
 			);
@@ -260,7 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				115106292C5532B300D91D04 /* ContentView.swift in Sources */,
+				115106592C55383700D91D04 /* VideoPlayer.swift in Sources */,
+				115106542C55339400D91D04 /* HomeView.swift in Sources */,
 				115106272C5532B300D91D04 /* SMSPlayerApp.swift in Sources */,
+				115106522C5532E800D91D04 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +461,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shakhawat.SMSPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,7 +501,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shakhawat.SMSPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
